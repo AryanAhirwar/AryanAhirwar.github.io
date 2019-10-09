@@ -1,18 +1,137 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+/* Style the body */
+body {
+  font-family: Arial;
+  color:rgb(200,200,200);
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image:url('558769.jpg');
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color:rgb(200,0,0);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  background-color:rgb(200,0,0);
+  color:rgb(200,200,200);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color:red;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color:black;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-image:url('url.jpg');
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-image:url('IMG_20190831_005617_770.jpg')
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background:black;
+  color:gray;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
 <body>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+<!-- Note -->
+<!-- Header -->
+<div class="header">
+  <h1 style="text-align:right;size:100px;">Aryan Ahirwar</h1>
+</div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About me</a>
+  <a href="#">Academics</a>
+  <a href="#">Contact me</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <img src="IMG_20190831_005617_770.jpg" style="height:280px;width:280px;">
+    <h3>Aryan Ahirwar</h3>
+    <ul style="list-style-type:circle;">
+     <li>Studies At IIT Khargapur, Kharagpur, West Bengal, India</li>
+     <br>
+     <li>Electronics And Electrical Communication Engineering Student</li>
+     <br>
+     <li>Lives at Rajendra Prasad Hall of Residence, IIT Kharagpur</li>
+     <br>
+     <li>Belongs from Lucknow, Uttar Pradesh, India</li>
+    </ul>
+
+  </div>
+  <div class="main">
+    <h1>Home</h1>
+    <p>This is Aryan Ahirwar's Portfolio Website</p>
+    <p>Hi I am Aryan Ahirwar, an undergraduate engineering student at IIT Kharagpur</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>WEB DESIGN PROJECT BY ARYAN AHIRWAR 2019</h2>
+</div>
 
 </body>
 </html>
